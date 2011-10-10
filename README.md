@@ -5,7 +5,7 @@
 
 To install nelson, use [npm](http://github.com/isaacs/npm):
 
-        $ npm install nelson
+    $ npm install nelson
 
 ## Usage
 
