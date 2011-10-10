@@ -1,4 +1,4 @@
-**Nelson is an EXTREMELY lightweight NodeJS mocking library** ![huhuhuhu](http://i.imgur.com/7DEce.png)
+**Nelson is a lightweight NodeJS mocking library** ![huhuhuhu](http://i.imgur.com/7DEce.png)
 
 
 ## Installation
