@@ -35,7 +35,8 @@ You can view further examples in the [example folder.](https://github.com/wearef
 
 ## Namespacing
 
-'os.types.blah.blah' = require('os').types.blah.blah
+```'os.types.blah.blah' = require('os').types.blah.blah```
+
 You can go as deep as you want (unlike inception)
 
 ## LICENSE
