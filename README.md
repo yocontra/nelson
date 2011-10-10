@@ -1,19 +1,42 @@
-**Nothing here yet**
+**Nelson is an EXTREMELY lightweight NodeJS mocking library** ![huhuhuhu](http://i.imgur.com/7DEce.png)
 
 
 ## Installation
-    
-To install APPNAME, use [npm](http://github.com/isaacs/npm):
 
-        $ npm install -g APPNAME
+To install nelson, use [npm](http://github.com/isaacs/npm):
+
+        $ npm install nelson
 
 ## Usage
 
-Nothing here yet
-
+```javascript
+var nelson = require('nelson');
+nelson.mock('namespace', {thisis: 'mynewvalue'});
+// Use super cool new value
+nelson.restore('namespace');
+// or you can use
+nelson.restoreAll();
+```
 ## Examples
 
-You can view further examples in the [example folder.](https://github.com/wearefractal/APPNAME/tree/master/examples)
+```coffee-script
+nelson = require 'nelson'
+darpSys = require 'sys'
+systest = {tar: 'dar', dar: 'har'}
+console.log darpSys.inspect systest # {tar: 'dar', dar: 'har'}
+nelson.mock 'sys.inspect', (obj) -> 
+  delete obj[key] for key in Object.keys obj when key is 'dar' # Filter out hashes when the key is dar
+  return obj
+    
+console.log darpSys.inspect systest # {tar: 'dar',}
+nelson.restoreAll()
+```
+You can view further examples in the [example folder.](https://github.com/wearefractal/nelson/tree/master/examples)
+
+## Namespacing
+
+'os.types.blah.blah' = require('os').types.blah.blah
+You can go as deep as you want (unlike inception)
 
 ## LICENSE
 
@@ -39,3 +62,4 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
