@@ -1,4 +1,5 @@
-**Nelson is a lightweight NodeJS mocking library** ![huhuhuhu](http://i.imgur.com/7DEce.png)
+![huhuhuhu](http://i.imgur.com/7DEce.png)
+**Nelson is a lightweight NodeJS mocking library**
 
 
 ## Installation
@@ -36,8 +37,6 @@ You can view further examples in the [example folder.](https://github.com/wearef
 ## Namespacing
 
 ```'os.types.blah.blah' = require('os').types.blah.blah```
-
-You can go as deep as you want (unlike inception)
 
 ## LICENSE
 
